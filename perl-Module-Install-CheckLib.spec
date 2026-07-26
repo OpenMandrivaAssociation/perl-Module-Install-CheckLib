@@ -1,15 +1,13 @@
 %define upstream_name    Module-Install-CheckLib
-%define upstream_version 0.14
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.14
+Release:	2
 
 Summary:	A Module::Install extension to check that a library is available
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/bingos/module-install-checklib
-Source0:	https://cpan.metacpan.org/authors/id/B/BI/BINGOS/Module-Install-CheckLib-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/B/BI/BINGOS/Module-Install-CheckLib-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -36,7 +34,7 @@ determines whether the current environment is supported or not and will
 exit accordingly.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
